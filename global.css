@@ -42,7 +42,7 @@ p { margin-bottom: 16px; }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 40px; /* Más margen a los lados en PC */
+  padding: 0 40px; 
   z-index: 1000;
 }
 
@@ -53,7 +53,10 @@ p { margin-bottom: 16px; }
   text-decoration: none;
 }
 
-.menu nav { display: flex; gap: 15px; }
+.menu nav { 
+  display: flex; 
+  gap: 15px; 
+}
 
 .menu nav a {
   color: #b0c4de;
@@ -64,15 +67,13 @@ p { margin-bottom: 16px; }
   font-size: 1.05rem;
 }
 
-.menu nav a:hover,
-.menu nav a.actiu {
+.menu nav a:hover,.menu nav a.actiu {
   background-color: rgba(255, 255, 255, 0.2);
   color: var(--color-blanco);
 }
 
 /* ---------- CONTENEDOR PRINCIPAL ---------- */
 .contenidor {
-  /* AQUÍ ESTÁ LA MAGIA: Ocupa el 95% de la pantalla hasta un máximo de 1400px */
   max-width: 1400px;
   width: 95%;
   margin: 0 auto;
@@ -106,24 +107,34 @@ footer {
   width: 100%;
 }
 
-footer a { color: var(--color-blanco); text-decoration: none; }
+footer a { 
+  color: var(--color-blanco); 
+  text-decoration: none; }
 
 /* ============================================================
    ESTILOS ESPECÍFICOS DE LAS PÁGINAS
    ============================================================ */
 
-/* --- INICIO (index.html) --- */
 .hero {
   background-color: var(--color-blanco);
   border: 1px solid var(--color-borde);
   border-radius: 8px;
-  padding: 70px 40px; /* Portada más grande y espaciosa */
+  padding: 70px 40px; 
   text-align: center;
   margin-bottom: 40px;
 }
 
-.hero h1 { font-size: 3rem; color: var(--color-principal); margin-bottom: 16px; }
-.hero p { font-size: 1.2rem; color: #555; max-width: 800px; margin: 0 auto 30px auto; }
+.hero h1 { 
+  font-size: 3rem; 
+  color: var(--color-principal); 
+  margin-bottom: 16px; 
+}
+.hero p { 
+  font-size: 1.2rem; 
+  color: #555; 
+  max-width: 800px; 
+  margin: 0 auto 30px auto; 
+}
 
 .titol-seccio { margin-bottom: 20px; font-size: 1.8rem; }
 
@@ -147,10 +158,22 @@ footer a { color: var(--color-blanco); text-decoration: none; }
   flex: 1 1 300px; /* Tarjetas un poco más anchas */
 }
 
-.carta h3 { color: var(--color-principal); margin-bottom: 12px; font-size: 1.3rem; }
-.carta p { font-size: 1rem; color: #555; }
+.carta h3 { 
+  color: var(--color-principal); 
+  margin-bottom: 12px; 
+  font-size: 1.3rem; 
+}
+.carta p { 
+  font-size: 1rem; 
+  color: #555; 
+}
 
-.etiquetes { display: flex; gap: 8px; margin-top: 16px; flex-wrap: wrap; }
+.etiquetes { 
+  display: flex; 
+  gap: 8px; 
+  margin-top: 16px; 
+  flex-wrap: wrap; 
+}
 .etiquetes span {
   background-color: var(--color-fondo);
   border: 1px solid var(--color-borde);
@@ -171,7 +194,11 @@ footer a { color: var(--color-blanco); text-decoration: none; }
   gap: 20px;
 }
 
-.beneficis div { font-weight: bold; color: var(--color-principal); font-size: 1.1rem; }
+.beneficis div { 
+  font-weight: bold; 
+  color: var(--color-principal); 
+  font-size: 1.1rem; 
+}
 
 /* --- PRODUCTOS (productes.html) --- */
 .barra-ordenar {
@@ -188,7 +215,10 @@ footer a { color: var(--color-blanco); text-decoration: none; }
   font-size: 1rem;
 }
 
-.barra-ordenar .resultados { font-weight: bold; color: var(--color-principal); }
+.barra-ordenar .resultados { 
+  font-weight: bold; 
+  color: var(--color-principal); 
+}
 
 .barra-ordenar .ordenar a {
   display: inline-block;
@@ -198,8 +228,13 @@ footer a { color: var(--color-blanco); text-decoration: none; }
   padding: 4px 10px;
   border-radius: 4px;
 }
-.barra-ordenar .ordenar a:hover { background-color: var(--color-fondo); }
-.barra-ordenar .ordenar a.actiu { background-color: var(--color-principal); color: var(--color-blanco); }
+.barra-ordenar .ordenar a:hover { 
+  background-color: var(--color-fondo); 
+}
+.barra-ordenar .ordenar a.actiu { 
+  background-color: var(--color-principal); 
+  color: var(--color-blanco); 
+}
 
 .graella {
   display: flex;
@@ -225,9 +260,20 @@ footer a { color: var(--color-blanco); text-decoration: none; }
   border: 1px solid var(--color-borde);
 }
 
-.targeta h3 { font-size: 1.25rem; color: var(--color-principal); margin-bottom: 8px; }
-.targeta p { font-size: 0.95rem; color: #666; }
-.preu { font-size: 1.4rem; font-weight: bold; color: var(--color-principal); margin-top: 12px; }
+.targeta h3 { font-size: 1.25rem;
+  color: var(--color-principal); 
+  margin-bottom: 8px; 
+}
+.targeta p { 
+  font-size: 0.95rem; 
+  color: #666; 
+}
+.preu { 
+  font-size: 1.4rem; 
+  font-weight: bold; 
+  color: var(--color-principal); 
+  margin-top: 12px; 
+}
 
 /* --- CONTACTO (contacte.html) --- */
 .grid-contacte {
@@ -243,8 +289,14 @@ footer a { color: var(--color-blanco); text-decoration: none; }
   padding: 30px;
 }
 
-.camp { margin-bottom: 20px; }
-.camp label { display: block; font-weight: bold; margin-bottom: 8px; }
+.camp { 
+  margin-bottom: 20px; 
+}
+.camp label { 
+  display: block; 
+  font-weight: bold; 
+  margin-bottom: 8px; 
+}
 .camp input, .camp textarea {
   width: 100%;
   padding: 12px;
@@ -253,17 +305,29 @@ footer a { color: var(--color-blanco); text-decoration: none; }
   font-family: inherit;
   font-size: 16px; 
 }
-.camp textarea { resize: vertical; min-height: 150px; }
+.camp textarea { 
+  resize: v
+  ertical; 
+  min-height: 150px; 
+}
 
-.info ul { list-style: none; margin-bottom: 30px; }
-.info li { margin-bottom: 12px; font-size: 1.05rem; }
-.info strong { color: var(--color-principal); }
+.info ul { 
+  list-style: none; 
+  margin-bottom: 30px; 
+}
+.info li { 
+  margin-bottom: 12px; 
+  font-size: 1.05rem; 
+}
+.info strong { 
+  color: var(--color-principal); 
+}
 
 .mapa {
   background-color: #e0e0e0;
   border: 1px solid var(--color-borde);
   border-radius: 6px;
-  height: 300px; /* Mapa mucho más grande */
+  height: 300px; 
   display: flex;
   align-items: center;
   justify-content: center;
@@ -274,7 +338,6 @@ footer a { color: var(--color-blanco); text-decoration: none; }
 
 /* ============================================================
    MEDIA QUERY — Móvil (iPhone 16 / max 600px)
-   Aquí se vuelve a hacer pequeño para que quepa en el móvil
    ============================================================ */
 @media (max-width: 600px) {
   .menu { padding: 0 12px; }
