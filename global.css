@@ -340,34 +340,83 @@ footer a {
    MEDIA QUERY — Móvil (iPhone 16 / max 600px)
    ============================================================ */
 @media (max-width: 600px) {
-  .menu { padding: 0 12px; }
-  .menu .marca { font-size: 1rem; }
-  .menu nav { gap: 4px; }
-  .menu nav a { font-size: 0.85rem; padding: 6px 10px; }
+  .menu { 
+    padding: 0 12px; 
+  }
+  .menu .marca { 
+    font-size: 1rem; 
+  }
+  .menu nav { 
+    gap: 4px; 
+  }
+  .menu nav a { 
+    font-size: 0.85rem; 
+    padding: 6px 10px; 
+  }
   
   .contenidor { 
     width: 100%;
     padding: calc(var(--altura-menu) + 20px) 16px 40px; 
   }
   
-  h1 { font-size: 1.8rem; }
-  .titol-seccio { font-size: 1.4rem; }
+  h1 { 
+    font-size: 1.8rem; 
+  }
+  .titol-seccio { 
+    font-size: 1.4rem; 
+  }
 
-  .hero { padding: 30px 16px; margin-bottom: 24px; }
-  .hero h1 { font-size: 1.8rem; }
-  .hero p { font-size: 1rem; }
+  .hero { 
+    padding: 30px 16px; 
+    margin-bottom: 24px; 
+  }
+  .hero h1 { 
+    font-size: 1.8rem; 
+  }
+  .hero p { 
+    font-size: 1rem; 
+  }
   
-  .carta { flex: 1 1 100%; padding: 20px; }
-  .beneficis { flex-direction: column; align-items: flex-start; gap: 12px; padding: 20px; }
+  .carta { 
+    flex: 1 1 100%; 
+    padding: 20px; 
+  }
+  .beneficis { 
+    flex-direction: column; 
+    align-items: flex-start; 
+    gap: 12px; 
+    padding: 20px; 
+  }
   
-  .barra-ordenar { flex-direction: column; align-items: flex-start; padding: 12px 16px; }
-  .barra-ordenar .ordenar a { margin-left: 0; margin-right: 8px; }
+  .barra-ordenar { 
+    flex-direction: column; 
+    align-items: flex-start; 
+    padding: 12px 16px; 
+  }
+  .barra-ordenar .ordenar a { 
+    margin-left: 0; 
+    margin-right: 8px; 
+  }
   
-  .targeta { flex: 1 1 100%; padding: 16px; }
-  .imatge { height: 180px; } /* Imagen más pequeña en móvil */
+  .targeta { 
+    flex: 1 1 100%; 
+    padding: 16px; 
+  }
+  .imatge { 
+    height: 180px; 
+  } 
   
-  .grid-contacte { grid-template-columns: 1fr; gap: 24px; }
-  .bloc { padding: 20px; }
-  .mapa { height: 200px; } /* Mapa más pequeño en móvil */
-  .info li { font-size: 0.95rem; }
+  .grid-contacte { 
+    grid-template-columns: 1fr; 
+    gap: 24px; 
+  }
+  .bloc { 
+    padding: 20px; 
+  }
+  .mapa { 
+    height: 200px; 
+  } 
+  .info li { 
+    font-size: 0.95rem; 
+  }
 }
