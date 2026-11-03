@@ -1,0 +1,310 @@
+/* ============================================================
+   TIENDA ESTELAR - global.css
+   ============================================================ */
+
+:root {
+  --color-principal: #2c3e50;
+  --color-fondo: #f4f6f8;
+  --color-blanco: #ffffff;
+  --color-texto: #333333;
+  --color-borde: #dcdcdc;
+  --altura-menu: 70px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  font-family: system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  -webkit-text-size-adjust: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+h1, h2, h3 { margin-bottom: 12px; }
+p { margin-bottom: 16px; }
+
+/* ---------- MENÚ FIXED ---------- */
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--altura-menu);
+  background-color: var(--color-principal);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px; /* Más margen a los lados en PC */
+  z-index: 1000;
+}
+
+.menu .marca {
+  color: var(--color-blanco);
+  font-weight: bold;
+  font-size: 1.3rem;
+  text-decoration: none;
+}
+
+.menu nav { display: flex; gap: 15px; }
+
+.menu nav a {
+  color: #b0c4de;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 1.05rem;
+}
+
+.menu nav a:hover,
+.menu nav a.actiu {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: var(--color-blanco);
+}
+
+/* ---------- CONTENEDOR PRINCIPAL ---------- */
+.contenidor {
+  /* AQUÍ ESTÁ LA MAGIA: Ocupa el 95% de la pantalla hasta un máximo de 1400px */
+  max-width: 1400px;
+  width: 95%;
+  margin: 0 auto;
+  padding: calc(var(--altura-menu) + 40px) 20px 60px;
+  flex: 1; 
+}
+
+/* ---------- BOTÓN ---------- */
+.boto {
+  display: inline-block;
+  background-color: var(--color-principal);
+  color: var(--color-blanco);
+  border: none;
+  padding: 14px 28px; /* Botón un poco más grande */
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.boto:hover { background-color: #1a252f; }
+
+/* ---------- FOOTER ---------- */
+footer {
+  background-color: var(--color-principal);
+  color: #b0c4de;
+  text-align: center;
+  padding: 30px;
+  font-size: 1rem;
+  width: 100%;
+}
+
+footer a { color: var(--color-blanco); text-decoration: none; }
+
+/* ============================================================
+   ESTILOS ESPECÍFICOS DE LAS PÁGINAS
+   ============================================================ */
+
+/* --- INICIO (index.html) --- */
+.hero {
+  background-color: var(--color-blanco);
+  border: 1px solid var(--color-borde);
+  border-radius: 8px;
+  padding: 70px 40px; /* Portada más grande y espaciosa */
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.hero h1 { font-size: 3rem; color: var(--color-principal); margin-bottom: 16px; }
+.hero p { font-size: 1.2rem; color: #555; max-width: 800px; margin: 0 auto 30px auto; }
+
+.titol-seccio { margin-bottom: 20px; font-size: 1.8rem; }
+
+.enllac-boto {
+  text-decoration: none;
+  display: inline-block;
+}
+
+.colleccions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.carta {
+  background-color: var(--color-blanco);
+  border: 1px solid var(--color-borde);
+  border-radius: 8px;
+  padding: 24px;
+  flex: 1 1 300px; /* Tarjetas un poco más anchas */
+}
+
+.carta h3 { color: var(--color-principal); margin-bottom: 12px; font-size: 1.3rem; }
+.carta p { font-size: 1rem; color: #555; }
+
+.etiquetes { display: flex; gap: 8px; margin-top: 16px; flex-wrap: wrap; }
+.etiquetes span {
+  background-color: var(--color-fondo);
+  border: 1px solid var(--color-borde);
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.beneficis {
+  background-color: var(--color-blanco);
+  border: 1px solid var(--color-borde);
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  padding: 24px 30px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.beneficis div { font-weight: bold; color: var(--color-principal); font-size: 1.1rem; }
+
+/* --- PRODUCTOS (productes.html) --- */
+.barra-ordenar {
+  background-color: var(--color-blanco);
+  border: 1px solid var(--color-borde);
+  border-radius: 8px;
+  padding: 16px 24px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 1rem;
+}
+
+.barra-ordenar .resultados { font-weight: bold; color: var(--color-principal); }
+
+.barra-ordenar .ordenar a {
+  display: inline-block;
+  color: var(--color-texto);
+  text-decoration: none;
+  margin-left: 12px;
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+.barra-ordenar .ordenar a:hover { background-color: var(--color-fondo); }
+.barra-ordenar .ordenar a.actiu { background-color: var(--color-principal); color: var(--color-blanco); }
+
+.graella {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.targeta {
+  background-color: var(--color-blanco);
+  border: 1px solid var(--color-borde);
+  border-radius: 8px;
+  flex: 1 1 300px;
+  padding: 20px;
+}
+
+.imatge {
+  width: 100%;
+  height: 220px; /* Imágenes más grandes */
+  background-color: var(--color-fondo); 
+  border-radius: 6px;
+  margin-bottom: 16px;
+  object-fit: cover; 
+  border: 1px solid var(--color-borde);
+}
+
+.targeta h3 { font-size: 1.25rem; color: var(--color-principal); margin-bottom: 8px; }
+.targeta p { font-size: 0.95rem; color: #666; }
+.preu { font-size: 1.4rem; font-weight: bold; color: var(--color-principal); margin-top: 12px; }
+
+/* --- CONTACTO (contacte.html) --- */
+.grid-contacte {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.bloc {
+  background-color: var(--color-blanco);
+  border: 1px solid var(--color-borde);
+  border-radius: 8px;
+  padding: 30px;
+}
+
+.camp { margin-bottom: 20px; }
+.camp label { display: block; font-weight: bold; margin-bottom: 8px; }
+.camp input, .camp textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--color-borde);
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 16px; 
+}
+.camp textarea { resize: vertical; min-height: 150px; }
+
+.info ul { list-style: none; margin-bottom: 30px; }
+.info li { margin-bottom: 12px; font-size: 1.05rem; }
+.info strong { color: var(--color-principal); }
+
+.mapa {
+  background-color: #e0e0e0;
+  border: 1px solid var(--color-borde);
+  border-radius: 6px;
+  height: 300px; /* Mapa mucho más grande */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* ============================================================
+   MEDIA QUERY — Móvil (iPhone 16 / max 600px)
+   Aquí se vuelve a hacer pequeño para que quepa en el móvil
+   ============================================================ */
+@media (max-width: 600px) {
+  .menu { padding: 0 12px; }
+  .menu .marca { font-size: 1rem; }
+  .menu nav { gap: 4px; }
+  .menu nav a { font-size: 0.85rem; padding: 6px 10px; }
+  
+  .contenidor { 
+    width: 100%;
+    padding: calc(var(--altura-menu) + 20px) 16px 40px; 
+  }
+  
+  h1 { font-size: 1.8rem; }
+  .titol-seccio { font-size: 1.4rem; }
+
+  .hero { padding: 30px 16px; margin-bottom: 24px; }
+  .hero h1 { font-size: 1.8rem; }
+  .hero p { font-size: 1rem; }
+  
+  .carta { flex: 1 1 100%; padding: 20px; }
+  .beneficis { flex-direction: column; align-items: flex-start; gap: 12px; padding: 20px; }
+  
+  .barra-ordenar { flex-direction: column; align-items: flex-start; padding: 12px 16px; }
+  .barra-ordenar .ordenar a { margin-left: 0; margin-right: 8px; }
+  
+  .targeta { flex: 1 1 100%; padding: 16px; }
+  .imatge { height: 180px; } /* Imagen más pequeña en móvil */
+  
+  .grid-contacte { grid-template-columns: 1fr; gap: 24px; }
+  .bloc { padding: 20px; }
+  .mapa { height: 200px; } /* Mapa más pequeño en móvil */
+  .info li { font-size: 0.95rem; }
+}
