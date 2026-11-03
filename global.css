@@ -155,7 +155,7 @@ footer a {
   border: 1px solid var(--color-borde);
   border-radius: 8px;
   padding: 24px;
-  flex: 1 1 300px; /* Tarjetas un poco más anchas */
+  flex: 1 1 300px; 
 }
 
 .carta h3 { 
