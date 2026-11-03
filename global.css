@@ -1,44 +1,41 @@
-/* ============================================================
-   TIENDA ESTELAR - global.css
-   ============================================================ */
-
 :root {
-  --color-principal: #2c3e50;
-  --color-fondo: #f4f6f8;
-  --color-blanco: #ffffff;
-  --color-texto: #333333;
-  --color-borde: #dcdcdc;
-  --altura-menu: 70px;
+  --azul-oscuro: #2c3e50;      
+  --gris-fondo: #f4f6f8;       
+  --blanco-tarjetas: #ffffff;  
+  --texto-oscuro: #333333;     
+  --borde-gris: #dcdcdc;       
+  --altura-menu: 70px;         
 }
 
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+  box-sizing: border-box; 
+  margin: 0;              
+  padding: 0;             
 }
 
 body {
-  background-color: var(--color-fondo);
-  color: var(--color-texto);
+  background-color: var(--gris-fondo);
+  color: var(--texto-oscuro);
   font-family: system-ui, -apple-system, sans-serif;
   line-height: 1.6;
   -webkit-text-size-adjust: 100%;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: 100vh; 
 }
 
 h1, h2, h3 { margin-bottom: 12px; }
 p { margin-bottom: 16px; }
 
-/* ---------- MENÚ FIXED ---------- */
+/* Menu (Inicio, Productos, Contacto) */
+
 .menu {
-  position: fixed;
+  position: fixed; 
   top: 0;
   left: 0;
   width: 100%;
   height: var(--altura-menu);
-  background-color: var(--color-principal);
+  background-color: var(--azul-oscuro);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -47,7 +44,7 @@ p { margin-bottom: 16px; }
 }
 
 .menu .marca {
-  color: var(--color-blanco);
+  color: var(--blanco-tarjetas);
   font-weight: bold;
   font-size: 1.3rem;
   text-decoration: none;
@@ -67,27 +64,25 @@ p { margin-bottom: 16px; }
   font-size: 1.05rem;
 }
 
-.menu nav a:hover,.menu nav a.actiu {
+.menu nav a:hover,.menu nav a.activo {
   background-color: rgba(255, 255, 255, 0.2);
-  color: var(--color-blanco);
+  color: var(--blanco-tarjetas);
 }
 
-/* ---------- CONTENEDOR PRINCIPAL ---------- */
-.contenidor {
+.contenedor {
   max-width: 1400px;
   width: 95%;
   margin: 0 auto;
-  padding: calc(var(--altura-menu) + 40px) 20px 60px;
+  padding: calc(var(--altura-menu) + 40px) 20px 60px;  
   flex: 1; 
 }
 
-/* ---------- BOTÓN ---------- */
-.boto {
+.boton {
   display: inline-block;
-  background-color: var(--color-principal);
-  color: var(--color-blanco);
+  background-color: var(--azul-oscuro);
+  color: var(--blanco-tarjetas);
   border: none;
-  padding: 14px 28px; /* Botón un poco más grande */
+  padding: 14px 28px;
   font-size: 1.1rem;
   font-weight: bold;
   border-radius: 6px;
@@ -95,11 +90,12 @@ p { margin-bottom: 16px; }
   text-decoration: none;
 }
 
-.boto:hover { background-color: #1a252f; }
+.boton:hover { 
+  background-color: #1a252f; 
+}
 
-/* ---------- FOOTER ---------- */
 footer {
-  background-color: var(--color-principal);
+  background-color: var(--azul-oscuro);
   color: #b0c4de;
   text-align: center;
   padding: 30px;
@@ -108,84 +104,90 @@ footer {
 }
 
 footer a { 
-  color: var(--color-blanco); 
-  text-decoration: none; }
+  color: var(--blanco-tarjetas); 
+  text-decoration: none; 
+}
 
-/* ============================================================
-   ESTILOS ESPECÍFICOS DE LAS PÁGINAS
-   ============================================================ */
 
-.hero {
-  background-color: var(--color-blanco);
-  border: 1px solid var(--color-borde);
+/* INICIO (index.html) */
+
+.portada {
+  background-color: var(--blanco-tarjetas);
+  border: 1px solid var(--borde-gris);
   border-radius: 8px;
   padding: 70px 40px; 
   text-align: center;
   margin-bottom: 40px;
 }
 
-.hero h1 { 
+.portada h1 { 
   font-size: 3rem; 
-  color: var(--color-principal); 
+  color: var(--azul-oscuro); 
   margin-bottom: 16px; 
 }
-.hero p { 
+
+.portada p { 
   font-size: 1.2rem; 
   color: #555; 
   max-width: 800px; 
   margin: 0 auto 30px auto; 
 }
 
-.titol-seccio { margin-bottom: 20px; font-size: 1.8rem; }
+.titulo-seccion { 
+  margin-bottom: 20px; 
+  font-size: 1.8rem; 
+}
 
-.enllac-boto {
+.enlace-boton {
   text-decoration: none;
   display: inline-block;
 }
 
-.colleccions {
+.colecciones {
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
   margin-bottom: 40px;
 }
 
-.carta {
-  background-color: var(--color-blanco);
-  border: 1px solid var(--color-borde);
+.tarjeta-coleccion {
+  background-color: var(--blanco-tarjetas);
+  border: 1px solid var(--borde-gris);
   border-radius: 8px;
   padding: 24px;
   flex: 1 1 300px; 
 }
 
-.carta h3 { 
-  color: var(--color-principal); 
+.tarjeta-coleccion h3 { 
+  color: var(--azul-oscuro); 
   margin-bottom: 12px; 
   font-size: 1.3rem; 
 }
-.carta p { 
+
+.tarjeta-coleccion p { 
   font-size: 1rem; 
   color: #555; 
 }
 
-.etiquetes { 
+.etiquetas { 
   display: flex; 
   gap: 8px; 
   margin-top: 16px; 
   flex-wrap: wrap; 
 }
-.etiquetes span {
-  background-color: var(--color-fondo);
-  border: 1px solid var(--color-borde);
+
+.etiquetas span {
+  background-color: var(--gris-fondo);
+  border: 1px solid var(--borde-gris);
   padding: 4px 12px;
   border-radius: 4px;
   font-size: 0.85rem;
   color: #555;
 }
 
-.beneficis {
-  background-color: var(--color-blanco);
-  border: 1px solid var(--color-borde);
+.beneficios {
+  background-color: var(--blanco-tarjetas);
+  border: 1px solid var(--borde-gris);
   border-radius: 8px;
   display: flex;
   justify-content: space-between;
@@ -194,16 +196,18 @@ footer a {
   gap: 20px;
 }
 
-.beneficis div { 
+.beneficios div { 
   font-weight: bold; 
-  color: var(--color-principal); 
+  color: var(--azul-oscuro); 
   font-size: 1.1rem; 
 }
 
-/* --- PRODUCTOS (productes.html) --- */
+
+/*  PRODUCTOS (productes.html)*/
+
 .barra-ordenar {
-  background-color: var(--color-blanco);
-  border: 1px solid var(--color-borde);
+  background-color: var(--blanco-tarjetas);
+  border: 1px solid var(--borde-gris);
   border-radius: 8px;
   padding: 16px 24px;
   margin-bottom: 30px;
@@ -215,117 +219,131 @@ footer a {
   font-size: 1rem;
 }
 
-.barra-ordenar .resultados { 
+.resultados { 
   font-weight: bold; 
-  color: var(--color-principal); 
+  color: var(--azul-oscuro); 
 }
 
-.barra-ordenar .ordenar a {
+.ordenar a {
   display: inline-block;
-  color: var(--color-texto);
+  color: var(--texto-oscuro);
   text-decoration: none;
   margin-left: 12px;
   padding: 4px 10px;
   border-radius: 4px;
 }
-.barra-ordenar .ordenar a:hover { 
-  background-color: var(--color-fondo); 
-}
-.barra-ordenar .ordenar a.actiu { 
-  background-color: var(--color-principal); 
-  color: var(--color-blanco); 
+
+.ordenar a:hover { 
+  background-color: var(--gris-fondo); 
 }
 
-.graella {
+.ordenar a.activo { 
+  background-color: var(--azul-oscuro); 
+  color: var(--blanco-tarjetas); 
+}
+
+.grid-productos {
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
 }
 
-.targeta {
-  background-color: var(--color-blanco);
-  border: 1px solid var(--color-borde);
+.tarjeta {
+  background-color: var(--blanco-tarjetas);
+  border: 1px solid var(--borde-gris);
   border-radius: 8px;
   flex: 1 1 300px;
   padding: 20px;
 }
 
-.imatge {
+.imagen {
   width: 100%;
-  height: 220px; /* Imágenes más grandes */
-  background-color: var(--color-fondo); 
+  height: 220px; 
+  background-color: var(--gris-fondo); 
   border-radius: 6px;
   margin-bottom: 16px;
   object-fit: cover; 
-  border: 1px solid var(--color-borde);
+  border: 1px solid var(--borde-gris);
 }
 
-.targeta h3 { font-size: 1.25rem;
-  color: var(--color-principal); 
+.tarjeta h3 { 
+  font-size: 1.25rem;
+  color: var(--azul-oscuro); 
   margin-bottom: 8px; 
 }
-.targeta p { 
+
+.tarjeta p { 
   font-size: 0.95rem; 
   color: #666; 
 }
-.preu { 
+
+.precio { 
   font-size: 1.4rem; 
   font-weight: bold; 
-  color: var(--color-principal); 
+  color: var(--azul-oscuro); 
   margin-top: 12px; 
 }
 
-/* --- CONTACTO (contacte.html) --- */
-.grid-contacte {
+
+/* PÁGINA DE CONTACTO (contacte.html) */
+
+.grid-contacto {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr; 
   gap: 40px;
 }
 
-.bloc {
-  background-color: var(--color-blanco);
-  border: 1px solid var(--color-borde);
+.bloque {
+  background-color: var(--blanco-tarjetas);
+  border: 1px solid var(--borde-gris);
   border-radius: 8px;
   padding: 30px;
 }
 
-.camp { 
+/* # FORMULARIO  */
+.campo { 
   margin-bottom: 20px; 
 }
-.camp label { 
+
+.campo label { 
   display: block; 
   font-weight: bold; 
   margin-bottom: 8px; 
 }
-.camp input, .camp textarea {
+
+.campo input, .campo textarea {
   width: 100%;
   padding: 12px;
-  border: 1px solid var(--color-borde);
+  border: 1px solid var(--borde-gris);
   border-radius: 4px;
   font-family: inherit;
   font-size: 16px; 
 }
-.camp textarea { 
-  resize: v
-  ertical; 
+
+.campo textarea { 
+  resize: vertical; 
   min-height: 150px; 
 }
 
+/* # CONTACTO  */
 .info ul { 
   list-style: none; 
   margin-bottom: 30px; 
 }
+
 .info li { 
   margin-bottom: 12px; 
   font-size: 1.05rem; 
 }
+
 .info strong { 
-  color: var(--color-principal); 
+  color: var(--azul-oscuro); 
 }
 
+/* # 16. MAPA FICTICIO */
 .mapa {
   background-color: #e0e0e0;
-  border: 1px solid var(--color-borde);
+  border: 1px solid var(--borde-gris);
   border-radius: 6px;
   height: 300px; 
   display: flex;
@@ -336,10 +354,10 @@ footer a {
   font-size: 1.2rem;
 }
 
-/* ============================================================
-   MEDIA QUERY — Móvil (iPhone 16 / max 600px)
-   ============================================================ */
+
+/* DISEÑO PARA MÓVILES (iPhone 16 )*/
 @media (max-width: 600px) {
+  
   .menu { 
     padding: 0 12px; 
   }
@@ -354,7 +372,7 @@ footer a {
     padding: 6px 10px; 
   }
   
-  .contenidor { 
+  .contenedor { 
     width: 100%;
     padding: calc(var(--altura-menu) + 20px) 16px 40px; 
   }
@@ -362,61 +380,45 @@ footer a {
   h1 { 
     font-size: 1.8rem; 
   }
-  .titol-seccio { 
+  .titulo-seccion { 
     font-size: 1.4rem; 
   }
 
-  .hero { 
+  /* (index.html) */
+  .portada { 
     padding: 30px 16px; 
     margin-bottom: 24px; 
   }
-  .hero h1 { 
-    font-size: 1.8rem; 
-  }
-  .hero p { 
-    font-size: 1rem; 
-  }
+  .portada h1 { 
+    font-size: 1.8rem; }
+  .portada p { font-size: 1rem; }
   
-  .carta { 
-    flex: 1 1 100%; 
-    padding: 20px; 
-  }
-  .beneficis { 
+  /* (index.html) */
+  .tarjeta-coleccion { flex: 1 1 100%; padding: 20px; }
+  
+  /*  (index.html) */
+  .beneficios { 
     flex-direction: column; 
     align-items: flex-start; 
     gap: 12px; 
     padding: 20px; 
   }
   
+  /* (productes.html) */
   .barra-ordenar { 
     flex-direction: column; 
     align-items: flex-start; 
     padding: 12px 16px; 
   }
-  .barra-ordenar .ordenar a { 
-    margin-left: 0; 
-    margin-right: 8px; 
-  }
+  .ordenar a { margin-left: 0; margin-right: 8px; }
   
-  .targeta { 
-    flex: 1 1 100%; 
-    padding: 16px; 
-  }
-  .imatge { 
-    height: 180px; 
-  } 
+  /* (productes.html)*/
+  .tarjeta { flex: 1 1 100%; padding: 16px; }
+  .imagen { height: 180px; } 
   
-  .grid-contacte { 
-    grid-template-columns: 1fr; 
-    gap: 24px; 
-  }
-  .bloc { 
-    padding: 20px; 
-  }
-  .mapa { 
-    height: 200px; 
-  } 
-  .info li { 
-    font-size: 0.95rem; 
-  }
+  /* (contacte.html) */
+  .grid-contacto { grid-template-columns: 1fr; gap: 24px; }
+  .bloque { padding: 20px; }
+  .mapa { height: 200px; } 
+  .info li { font-size: 0.95rem; }
 }
